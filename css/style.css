@@ -1,26 +1,11 @@
+:root {
+    --primary-color: rgb(185 200 234);
+}
+
 * {
     margin: 0;
     padding: 0;
 }
-
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-        justify-content: start; 
-      }
-      
-      body {
-        padding: 0; 
-      }
-    
-      main > section:first-child {
-        width: 100%; 
-      }
-
-      .p-info {
-        width: 70%;
-    }
-  }
 
 body {
     padding: 1rem;
@@ -36,9 +21,6 @@ body {
     justify-content: center; /*Centering the Text for section and article*/
 }
 
-  
-
-
 section {
     padding:1rem;
 }
@@ -53,11 +35,12 @@ section {
 
 a {
     text-decoration: none;
+    font-weight: 560;
     color: white;
-}
 
-a:hover {
-    color: beige;
+    &:hover {
+        color: var(--primary-color);
+    }
 }
 
 .big-bold {
@@ -69,4 +52,81 @@ a:hover {
 .p-info {
     font-family: 'Quicksand', sans-serif;
     font-weight: 50;
+}
+
+.inputBox {
+    margin-top: 3rem;
+    padding: 1rem;
+    color:white;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: black;
+    
+}
+
+button {
+    padding: 1rem;
+    margin-left: 1rem;
+    color:black;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+
+    &:hover {
+        color: white;
+    }
+
+    &:active {
+        color: blue;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+        justify-content: start; 
+      }
+      
+      body {
+        padding: 0; 
+      }
+    
+      main > section:first-child {
+        width: 100%; 
+      }
+
+      .big-bold {
+        font-size: 44px;
+      }
+
+      .p-info {
+        width: 100%;
+    }
+  }
+
+@media (max-width: 499px) {
+    button {
+        margin: 0;
+    }
+
+    .inputBox {
+        padding: 1rem;
+        width: 160px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    button {
+        margin: 0;
+    }
+
+    .inputBox {
+        padding: 1rem;
+        width: 140px;
+    }
 }
