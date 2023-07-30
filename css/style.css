@@ -10,37 +10,69 @@
 body {
     padding: 1rem;
 
-    background-color: black;
-    color: white;
+    background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container {
-    margin-top: 6rem;
-    display: flex;
-    justify-content: center; /*Centering the Text for section and article*/
+button {
+    background-color: #9FC3E9;
+    padding: 1rem;
+    border: none;
 }
 
 section {
     padding:1rem;
 }
 
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.container {
+    margin-top: 6rem;
+
+    display: flex;
+    text-align: center;
+    justify-content: center; /*Centering the Text for section and article*/
+}
+
+.con-2 {
+    display: flex;
+    padding: 2rem;
+    background-color: #F5F5F5;
+}
+
+.c2-imgs {
+    display: flex;
+    gap: 20px;
+}
+
+.stats {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+
+    justify-content: space-evenly;
+    font-size: 42px;
+}
+
+.s-info {
+    font-size: 14px;
+    justify-content: space-evenly;
+    
+}
+
 .nav {
+
     font-family: 'Quicksand', sans-serif;
     padding: 1rem;
     display: flex;
     gap: 20px; 
     align-content: center;
-}
-
-a {
-    text-decoration: none;
-    font-weight: 560;
-    color: white;
-
-    &:hover {
-        color: var(--primary-color);
-    }
 }
 
 .big-bold {
@@ -51,7 +83,7 @@ a {
 
 .p-info {
     font-family: 'Quicksand', sans-serif;
-    font-weight: 50;
+    font-weight: 500;
 }
 
 .inputBox {
@@ -65,24 +97,32 @@ a {
     
 }
 
-button {
-    padding: 1rem;
-    margin-left: 1rem;
-    color:black;
-    font-weight: 600;
+.app-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
 
-    border: none;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-
+.app-btn {
+    display: flex;
+    
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    
     &:hover {
-        color: white;
+        background-color: #84B7E8;
     }
 
     &:active {
-        color: blue;
+        background-color: #6D9AD5;
     }
 }
+  
+.app-btn img {
+    margin-right: 10px;
+}
+  
 
 
 @media (max-width: 500px) {
