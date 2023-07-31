@@ -12,6 +12,9 @@ body {
 
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-image: url("../images/home-gradient.png");
+    background-size: cover;
 }
 
 button {
@@ -42,16 +45,38 @@ a {
 
 .con-2 {
     display: flex;
+    flex: 1 1 auto;
+    justify-content: space-around;
     padding: 2rem;
     background-color: #F5F5F5;
 }
 
 .c2-imgs {
-    display: flex;
-    gap: 20px;
+    height: 100px;
 }
 
+.con-2 section {
+    width: 50%;
+}
+
+.con-3 {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem;
+
+    align-items: center;
+}
+
+.con-3 section {
+    width: 50%; /*THIS IS WHAT MESSES UP THE MOBILE LAYOUT, NEED TO USE COLUMN OR SOMETHING MEDIA QUERY*/
+
+}
+
+
+
 .stats {
+    margin-top: 1rem;
     display: flex;
     text-decoration: none;
     list-style: none;
@@ -125,30 +150,40 @@ a {
   
 
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) { 
     .container {
         flex-direction: column;
         justify-content: start; 
       }
       
-      body {
+    body {
         padding: 0; 
-      }
+    }
     
-      main > section:first-child {
+    main > section:first-child {
         width: 100%; 
-      }
+    }
 
-      .big-bold {
+    .big-bold {
         font-size: 44px;
-      }
+    }
 
-      .p-info {
+    .p-info {
         width: 100%;
     }
+
+    .con-2 section {
+        width: 100%;
+    }
+
+    .con-2 {
+        flex-direction: column;
+    }
+
+
   }
 
-@media (max-width: 499px) {
+@media (max-width: 499px) { /*Iphone SE,XR,12 Pro?*/
     button {
         margin: 0;
     }
@@ -157,6 +192,9 @@ a {
         padding: 1rem;
         width: 160px;
     }
+
+
+
 }
 
 @media (max-width: 380px) {
