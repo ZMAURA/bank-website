@@ -4,7 +4,7 @@ This repository contains the code for my personal project: a remake of a Bank We
 
 ## Project Overview
 
-As part of my learning journey in web development, I decided to recreate a bank website from scratch. I chose to use pure HTML, CSS, and JavaScript (if necessary) to ensure a strong foundation and deepen my understanding of front-end development concepts.
+As part of my learning journey in web development, I decided to recreate a bank homepage from scratch. I chose to use pure HTML, CSS, and JavaScript (if necessary) to ensure a strong foundation and deepen my understanding of front-end development concepts.
 
 ## Features
 
@@ -33,7 +33,11 @@ The project structure will be organized as follows:
 ├── js/
 │   ├── app.js
 ├── images/
-│   ├── logo.png
+│   ├── apple-logo.png
+│   ├── backers2.png
+│   ├── google-play.png
+│   ├── home-gradient.png
+│   ├── showcase.png
 └── README.md
 ```
 # 
