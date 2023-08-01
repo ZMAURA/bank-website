@@ -37,15 +37,48 @@ section {
 
 a {
     text-decoration: none;
+    color: black;
 
     &:hover {
         color: var(--primary-color);
+    }
+
+    &:visited {
+        color: black;
     }
 }
 
 p {
     font-family: 'Quicksand', sans-serif;
 }
+
+footer {
+    font-family: 'QuickSand';
+    background-color: #7E9FCF;
+    color:  #1A3F71;
+
+    display: flex;
+    padding: 2rem;
+    flex: 1;
+    justify-content: space-between;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+.divider {
+    position: relative;
+  }
+  
+  .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    border-top: 1px solid gray; /* Replace #CCCCCC with your desired color */
+  }
 
 .material-symbols-outlined {
 
@@ -139,14 +172,56 @@ p {
     
 }
 
-.nav {
 
-    font-family: 'Quicksand', sans-serif;
-    padding: 1rem;
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+
+.navbar {
     display: flex;
-    gap: 20px; 
-    align-content: center;
-}
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 20px;
+  }
 
 .big-bold {
     font-family: REM;
@@ -224,6 +299,8 @@ p {
     background-color: #E3EEFF;
     border-radius: 10px;
 }
+
+
 
 @media (max-width: 1100px) { 
     .container {
@@ -316,9 +393,33 @@ p {
         padding: 1rem;
         width: 160px;
     }
+}
 
-
-
+@media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .hamburger-menu {
+      display: block;
+    }
+  
+    .navbar-left, .navbar-right {
+      display: flex;
+      align-items: center;
+    }
 }
 
 @media (max-width: 380px) {
@@ -330,5 +431,12 @@ p {
     .inputBox {
         padding: 1rem;
         width: 140px;
+    }
+}
+
+@media (max-width: 730px) {
+    footer {
+        flex-direction: column;
+        gap:1rem;
     }
 }
